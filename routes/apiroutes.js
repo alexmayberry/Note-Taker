@@ -21,8 +21,10 @@ router.route('/notes')
                 text,
                 note_id: uuid(),
             };
-            db.push(newNote)
-            fs.writeFile('../db/db.json', db, (err) => {
+            db.push(newNote);
+            // stringified the db array to resolve a TypeError
+            const stringifiedDb = JSON.stringify(db);
+            fs.writeFile('./db/db.json', stringifiedDb, (err) => {
                 err ? console.log(err) : console.log("it worked?!")
             });
     
