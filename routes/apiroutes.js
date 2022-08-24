@@ -39,11 +39,10 @@ router.route('/notes')
         }
     })
 
-
-//CREATE note button on 'new note' button click
-    //write file with fs
-
-// DELETE notes on trashcan button click
-    //delete file with fs /api/notes/:id
+// router.delete('/notes/:id', (req, res) => {
+//     if (req.params.id === db[i].note_id) {
+//         res.
+//     }
+// })
 
 module.exports = router;
